@@ -14,9 +14,9 @@ architecture Behavioral of RSS is
 begin
   process(entrada,reloj,temp)
     begin
-      if(reloj'event and reloj='1') then
-		  temp(3 downto 1) <= temp(2 downto 0);
-		  temp(0) <= entrada;
-		end if;
-  end process;
+			if(reloj'event and reloj='1') then
+				temp(3 downto 1) <= temp(2 downto 0);
+				temp(0) <= entrada;
+			end if;
+	end process;
 end Behavioral;
