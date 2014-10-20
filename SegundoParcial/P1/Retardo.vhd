@@ -13,15 +13,15 @@ end Retardo;
 architecture Behavioral of Retardo is
   signal cont: integer range 0 to 450000000;
 begin
-	process(clock) begin
-     if(clock'event and clock='1') then
-	    cont <= cont+1;
-	    if(cont=250000000) then
-		   leds(0) <= not leds(0);
-		 elsif(cont=125000000) then
-		   leds(0) <= not leds(0);
-		 end if;
-	  end if;
-	end process;
+  process(clock) begin
+    if(clock'event and clock='1') then
+      cont <= cont+1;
+      if(cont=250000000) then
+        leds(0) <= not leds(0);
+      elsif(cont=125000000) then
+        leds(0) <= not leds(0);
+      end if;
+    end if;
+  end process;
 end Behavioral;
 
