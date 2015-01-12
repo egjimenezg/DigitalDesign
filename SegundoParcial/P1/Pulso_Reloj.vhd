@@ -1,7 +1,5 @@
 -- Author: Gamaliel Jiménez 
--- 
--- Create Date: 15:14:42 01/11/2015 
--- Design Name:  
+-- Create Date: 01/11/2015 
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -23,16 +21,16 @@ begin
     if(cont=56250000) then
       if(counter=3) then
         counter <= 0;
-       leds(1) <= not leds(0);
+        leds(1) <= not leds(0);
       end if;
       leds(0) <= not leds(0);
     elsif(cont=112500000) then  
-    cont <= 0;
-    if(leds(1)='1' and counter=0) then
-      leds(1) <= not leds(1);
-    end if;
-    counter <= counter+1;
-    leds(0) <= not leds(0);   
+      cont <= 0;
+      if(leds(1)='1' and counter=0) then
+        leds(1) <= not leds(1);
+      end if;
+      counter <= counter+1;
+      leds(0) <= not leds(0);   
     end if;
   end if;
   
